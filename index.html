@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Vivar Tirado - Administrador de Sistemas | Portfolio</title>
+    <title>Ivan Vivar Tirado | Administrador de Sistemas & Ciberseguridad | Barcelona</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text y='.85em' font-size='42' x='50%' text-anchor='middle' font-family='monospace' font-weight='bold' fill='%23030712'>IVT</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta name="description" content="Ivan Vivar Tirado - Administrador de Sistemas (ASIR) en Barcelona. Especialista en redes Cisco, Linux, Docker, ciberseguridad y automatización. Certificado Cisco Cybersecurity & Networking.">
+    <meta name="keywords" content="Ivan Vivar Tirado, administrador sistemas Barcelona, ASIR, ciberseguridad junior, redes Cisco, Linux, Docker, WireGuard, soporte técnico, seguridad informática, sysadmin Barcelona, homelab">
+    <meta name="author" content="Ivan Vivar Tirado">
+    <meta name="robots" content="index, follow">
     <meta property="og:url" content="https://ivanvivartirado.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ivan Vivar Tirado - Administrador de Sistemas | Portfolio">
-    <meta property="og:description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta property="og:title" content="Ivan Vivar Tirado | Administrador de Sistemas & Ciberseguridad | Barcelona">
+    <meta property="og:description" content="Administrador de Sistemas (ASIR) en Barcelona. Especialista en redes Cisco, Linux, Docker, ciberseguridad y automatización. Certificado Cisco Cybersecurity & Networking.">
     <meta property="og:image" content="https://ivanvivartirado.github.io/og-image.png">
+    <meta property="og:locale" content="es_ES">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="ivanvivartirado.github.io">
     <meta property="twitter:url" content="https://ivanvivartirado.github.io/">
-    <meta name="twitter:title" content="Ivan Vivar Tirado - Administrador de Sistemas | Portfolio">
-    <meta name="twitter:description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta name="twitter:title" content="Ivan Vivar Tirado | Administrador de Sistemas & Ciberseguridad | Barcelona">
+    <meta name="twitter:description" content="Administrador de Sistemas (ASIR) en Barcelona. Especialista en redes Cisco, Linux, Docker, ciberseguridad y automatización.">
     <meta name="twitter:image" content="https://ivanvivartirado.github.io/og-image.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ivan Vivar Tirado",
+        "jobTitle": "Administrador de Sistemas y Especialista en Ciberseguridad",
+        "url": "https://ivanvivartirado.github.io/",
+        "sameAs": [
+            "https://linkedin.com/in/ivanvivartirado",
+            "https://github.com/ivanvivartirado"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Santa Coloma de Gramanet",
+            "addressRegion": "Barcelona",
+            "addressCountry": "ES"
+        },
+        "knowsAbout": ["Linux", "Cisco Networking", "Ciberseguridad", "Docker", "Bash/Shell", "Active Directory", "WireGuard", "SQL"],
+        "hasCredential": [
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "Certificate", "name": "Cisco Cybersecurity"},
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "Certificate", "name": "Cisco Networking"}
+        ]
+    }
+    </script>
     <style>
         :root {
             --bg-dark: #0f172a;
@@ -70,11 +98,21 @@
 
         .sidebar-header { text-align: center; padding: 30px 24px 18px; border-bottom: 1px solid var(--border); }
 
-        .sidebar-header .avatar {
-            width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%;
-            display: grid; place-items: center; font-weight: 700; font-size: 18px; color: #030712;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+        .sidebar-header .avatar-photo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
             box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+            border: 2px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .sidebar-header .avatar-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
         }
 
         .sidebar-header h1 { font-size: 1.25rem; letter-spacing: 0.02em; margin-bottom: 6px; }
@@ -202,12 +240,13 @@
             .skills-grid, .projects-grid, .contact-grid, .timeline { grid-template-columns: 1fr; }
         }
     </style>
+<base target="_blank">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="avatar">IVT</div>
+                <img src="ivan-vivar-tirado.jpg" alt="Ivan Vivar Tirado - Administrador de Sistemas y Ciberseguridad en Barcelona" class="avatar-photo">
                 <h1>Ivan Vivar Tirado</h1>
                 <p class="role">Administrador de Sistemas</p>
             </div>
@@ -253,13 +292,14 @@
             home: `
                 <div class="section-header">
                     <h1>Ivan <span class="highlight">Vivar Tirado</span></h1>
-                    <p class="subtitle">> Administrador de Sistemas (ASIR) | Especialista en Redes y Seguridad</p>
+                    <p class="subtitle">> Administrador de Sistemas (ASIR) | Especialista en Redes y Ciberseguridad</p>
                     <p class="location">📍 Santa Coloma de Gramanet, Barcelona</p>
                 </div>
                 <div class="card primary-card">
                     <div class="card-header"><h3>// Sobre mí</h3></div>
-                    <p>Soy una persona tranquila, paciente y sociable, con gran capacidad de adaptación. Aprendo rápido de forma autodidacta y me integro fácilmente en equipos y nuevos entornos de trabajo.</p>
-                    <p style="margin-top:10px"><strong>Apasionado por:</strong> La tecnología, el soporte técnico y la <span class="highlight">ciberseguridad</span>.</p>
+                    <p>Administrador de sistemas con base sólida en infraestructuras Linux y redes Cisco. Certificado en Cisco Cybersecurity y Networking. Apasionado por la automatización, el hardening de sistemas y la transición hacia equipos de seguridad (SOC/Blue Team).</p>
+                    <p style="margin-top:10px"><strong>Construyendo:</strong> Labs de detección de intrusos, homelab con Docker/WireGuard, y writeups de CTFs para documentar mi progreso en ciberseguridad.</p>
+                    <p style="margin-top:10px"><strong>Objetivo:</strong> Incorporarme a un equipo de infraestructura o seguridad tras finalizar ASIX, para luego especializarme con un máster en ciberseguridad.</p>
                 </div>
                 <div>
                     <h3 style="margin-bottom:16px;color:var(--accent)">// Certificaciones y Competencias</h3>
@@ -281,6 +321,9 @@
                         <span class="tech-tag">Cisco IOS</span>
                         <span class="tech-tag">Git</span>
                         <span class="tech-tag">Active Directory</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">WireGuard</span>
+                        <span class="tech-tag">Nginx</span>
                     </div>
                 </div>
             `,
@@ -298,9 +341,9 @@
                                 <p class="date">📅 Septiembre 2024 - Febrero 2025</p>
                                 <p class="company"><strong>Instituto Pompeu Fabra</strong></p>
                                 <ul class="tasks-list">
-                                    <li>✓ Soporte técnico y administración de sistemas</li>
-                                    <li>✓ Configuración y mantenimiento de equipos y redes</li>
-                                    <li>✓ Resolución de incidencias en entorno educativo</li>
+                                    <li>✓ Soporte técnico y administración de sistemas en entorno educativo</li>
+                                    <li>✓ Configuración y mantenimiento de equipos, redes y Active Directory</li>
+                                    <li>✓ Resolución de incidencias y gestión de tickets</li>
                                 </ul>
                             </div>
                         </div>
@@ -314,8 +357,7 @@
                                 <p class="company"><strong>Ingesan (Grupo OHLA)</strong></p>
                                 <ul class="tasks-list">
                                     <li>✓ Trabajo en equipo dinámico y exigente</li>
-                                    <li>✓ Compromiso y puntualidad</li>
-                                    <li>✓ Adaptabilidad a diferentes entornos</li>
+                                    <li>✓ Compromiso, puntualidad y adaptabilidad</li>
                                 </ul>
                             </div>
                         </div>
@@ -327,10 +369,10 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="card">
-                                <h3>📚 GS Administración de Sistemas y Redes</h3>
+                                <h3>📚 GS Administración de Sistemas y Redes (ASIR)</h3>
                                 <p class="date">📅 2025 - Cursando</p>
                                 <p class="company"><strong>Institut Puig Castellar, Barcelona</strong></p>
-                                <p>Especialización en administración de servidores, redes y seguridad informática.</p>
+                                <p>Especialización en administración de servidores, redes empresariales y seguridad informática.</p>
                             </div>
                         </div>
                     </div>
@@ -338,7 +380,7 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="card">
-                                <h3>📚 GM Sistemas Microinformáticos y Redes</h3>
+                                <h3>📚 GM Sistemas Microinformáticos y Redes (SMX)</h3>
                                 <p class="date">📅 2023 - 2025</p>
                                 <p class="company"><strong>Institut Puig Castellar, Barcelona</strong></p>
                                 <p>Nota media: <span class="highlight">8.17/10</span> — Fundamentos en sistemas, redes y soporte técnico.</p>
@@ -350,7 +392,7 @@
 
             projects: `
                 <div class="section-header">
-                    <h2>Proyectos y Competencias</h2>
+                    <h2>Proyectos y Labs</h2>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
@@ -358,7 +400,7 @@
                             <h3>🎮 Connexió Luanti</h3>
                             <span class="badge-featured">Destacado</span>
                         </div>
-                        <p class="project-desc">Automatización y gestión de servidores de videojuegos con interfaz web. Implementación de contenedores y administración remota.</p>
+                        <p class="project-desc">Automatización y gestión de servidores de videojuegos con interfaz web. Implementación de contenedores Podman, administración remota y base de datos SQL.</p>
                         <div class="tech-list">
                             <span class="tech-tag">Linux</span>
                             <span class="tech-tag">Bash</span>
@@ -373,7 +415,7 @@
                             <h3>🏠 Homelab Personal</h3>
                             <span class="badge">En progreso</span>
                         </div>
-                        <p class="project-desc">Homelab personal para aprender y experimentar con Docker, redes y seguridad. Incluye VPN con WireGuard, proxy inverso con Nginx, base de datos MariaDB y más servicios autoalojados.</p>
+                        <p class="project-desc">Infraestructura autoalojada para aprender ciberseguridad práctica: VPN WireGuard, proxy inverso Nginx, base de datos MariaDB, contenedores Docker y monitorización.</p>
                         <div class="tech-list">
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">WireGuard</span>
@@ -390,27 +432,27 @@
                         <h4>🖥️ Sistemas Operativos</h4>
                         <ul>
                             <li>Instalación y configuración de SO (Windows, Linux, macOS)</li>
-                            <li>Administración de usuarios y permisos</li>
-                            <li>Gestión de servicios y procesos</li>
-                            <li>Troubleshooting avanzado</li>
+                            <li>Administración de usuarios, permisos y políticas de grupo</li>
+                            <li>Gestión de servicios, procesos y automatización con cron/systemd</li>
+                            <li>Troubleshooting avanzado y diagnóstico de rendimiento</li>
                         </ul>
                     </div>
                     <div class="skill-group">
                         <h4>🔐 Seguridad</h4>
                         <ul>
-                            <li>Fundamentos de ciberseguridad</li>
-                            <li>Configuración de firewalls y VPN</li>
-                            <li>Análisis de vulnerabilidades básico</li>
-                            <li>Políticas de seguridad y hardening</li>
+                            <li>Fundamentos de ciberseguridad (Cisco Cybersecurity)</li>
+                            <li>Configuración de firewalls, VPNs y segmentación de red</li>
+                            <li>Hardening básico de sistemas Linux y Windows</li>
+                            <li>Análisis de vulnerabilidades y gestión de parches</li>
                         </ul>
                     </div>
                     <div class="skill-group">
                         <h4>🌐 Redes</h4>
                         <ul>
-                            <li>Configuración de equipos Cisco</li>
-                            <li>Subnetting y routing</li>
-                            <li>Protocolos TCP/IP y DNS</li>
-                            <li>Diagnóstico con herramientas avanzadas</li>
+                            <li>Configuración de equipos Cisco (routers, switches)</li>
+                            <li>Subnetting, routing estático/dinámico y VLANs</li>
+                            <li>Protocolos TCP/IP, DNS, DHCP, NAT</li>
+                            <li>Diagnóstico con Wireshark, ping, traceroute, nmap</li>
                         </ul>
                     </div>
                 </div>
@@ -419,7 +461,7 @@
             contact: `
                 <div class="section-header">
                     <h2>Conectemos</h2>
-                    <p class="subtitle">> Siempre abierto a nuevas oportunidades y colaboraciones</p>
+                    <p class="subtitle">> Siempre abierto a nuevas oportunidades, colaboraciones y proyectos de ciberseguridad</p>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-card">
@@ -452,7 +494,7 @@
                     </div>
                 </div>
                 <div class="cta-section">
-                    <p>> ¿Quieres trabajar juntos? Envíame un email o conecta conmigo en LinkedIn.</p>
+                    <p>> ¿Buscas un perfil junior con ganas de crecer en ciberseguridad? Envíame un email o conecta conmigo en LinkedIn.</p>
                     <a href="mailto:ivaanv23@gmail.com" class="cta-button">Enviar Email</a>
                 </div>
             `
