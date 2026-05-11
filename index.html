@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Vivar Tirado - Portfolio</title>
+    <title>Ivan Vivar Tirado - Administrador de Sistemas | Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text y='.85em' font-size='42' x='50%' text-anchor='middle' font-family='monospace' font-weight='bold' fill='%23030712'>IVT</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Ivan Vivar Tirado - Portfolio">
-    <meta property="og:description" content="Administrador de Sistemas (ASIR) · Redes · Ciberseguridad · ivanvivartirado.github.io">
-    <meta property="og:image" content="https://ivanvivartirado.github.io/og-image.png">
-    <meta property="og:url" content="https://ivanvivartirado.github.io">
+    <meta name="description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta property="og:url" content="https://ivanvivartirado.github.io/">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Ivan Vivar Tirado - Administrador de Sistemas | Portfolio">
+    <meta property="og:description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta property="og:image" content="https://ivanvivartirado.github.io/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="ivanvivartirado.github.io">
+    <meta property="twitter:url" content="https://ivanvivartirado.github.io/">
+    <meta name="twitter:title" content="Ivan Vivar Tirado - Administrador de Sistemas | Portfolio">
+    <meta name="twitter:description" content="Administrador de Sistemas (ASIR) especializado en redes, Linux y ciberseguridad. Proyectos con Docker, WireGuard, Cisco IOS y más.">
+    <meta name="twitter:image" content="https://ivanvivartirado.github.io/og-image.png">
     <style>
         :root {
             --bg-dark: #0f172a;
@@ -29,7 +36,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html, body { min-height: 100%; }
 
         body {
@@ -60,29 +66,13 @@
             -webkit-backdrop-filter: blur(20px);
         }
 
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            min-height: 0;
-            overflow: hidden;
-        }
+        .sidebar { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
 
-        .sidebar-header {
-            text-align: center;
-            padding: 30px 24px 18px;
-            border-bottom: 1px solid var(--border);
-        }
+        .sidebar-header { text-align: center; padding: 30px 24px 18px; border-bottom: 1px solid var(--border); }
 
         .sidebar-header .avatar {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 16px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            font-size: 18px;
-            color: #030712;
+            width: 70px; height: 70px; margin: 0 auto 16px; border-radius: 50%;
+            display: grid; place-items: center; font-weight: 700; font-size: 18px; color: #030712;
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
             box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
         }
@@ -93,86 +83,48 @@
         .nav-menu { display: flex; flex-direction: column; gap: 10px; padding: 18px 16px; }
 
         .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 14px;
-            border-radius: 14px;
-            text-decoration: none;
-            color: var(--text-dim);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            background: none;
-            width: 100%;
-            text-align: left;
+            display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+            border-radius: 14px; text-decoration: none; color: var(--text-dim);
+            font-family: 'JetBrains Mono', monospace; font-size: 0.95rem;
+            transition: var(--transition); cursor: pointer; border: none;
+            background: none; width: 100%; text-align: left;
         }
 
-        .nav-item:hover, .nav-item.active {
-            color: var(--accent);
-            background: rgba(14, 165, 233, 0.12);
-        }
-
-        .nav-item.active {
-            border-left: 3px solid var(--accent);
-            padding-left: 11px;
-        }
+        .nav-item:hover, .nav-item.active { color: var(--accent); background: rgba(14, 165, 233, 0.12); }
+        .nav-item.active { border-left: 3px solid var(--accent); padding-left: 11px; }
 
         .icon { display: inline-flex; font-size: 0.86rem; color: var(--accent); }
 
         .sidebar-footer {
-            margin-top: auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 22px 16px 20px;
-            border-top: 1px solid var(--border);
+            margin-top: auto; display: flex; flex-wrap: wrap; gap: 12px;
+            padding: 22px 16px 20px; border-top: 1px solid var(--border);
         }
 
         .social-link {
-            flex: 1 1 calc(50% - 6px);
-            min-width: 96px;
-            text-align: center;
-            padding: 12px 0;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            background: rgba(14, 165, 233, 0.12);
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            transition: var(--transition);
+            flex: 1 1 calc(50% - 6px); min-width: 96px; text-align: center;
+            padding: 12px 0; border-radius: 14px; border: 1px solid var(--border);
+            background: rgba(14, 165, 233, 0.12); color: var(--accent);
+            text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: var(--transition);
         }
-
         .social-link:hover { background: rgba(14, 165, 233, 0.22); border-color: var(--accent); }
 
         .main { min-height: 0; display: flex; }
-
         .window { width: 100%; display: flex; flex-direction: column; overflow: hidden; }
 
         .window-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            padding: 18px 22px;
-            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--border);
             background: rgba(255, 255, 255, 0.04);
         }
 
         .terminal-title { font-family: 'JetBrains Mono', monospace; color: var(--text-dim); font-size: 0.95rem; }
-
         .window-controls { display: flex; gap: 10px; }
-
-        .control { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+        .control { width: 12px; height: 12px; border-radius: 50%; }
         .control:nth-child(1) { background: #ff5f56; }
         .control:nth-child(2) { background: #ffbd2e; }
         .control:nth-child(3) { background: #27c93f; }
 
         .window-content { padding: 26px; overflow: auto; min-height: 0; flex: 1; }
-
         .display { display: flex; flex-direction: column; gap: 26px; transition: opacity 0.15s ease; }
         .display.fade-out { opacity: 0; }
 
@@ -183,93 +135,40 @@
         .subtitle { font-size: 0.98rem; }
         .location { margin-top: 8px; color: var(--text-dim); font-size: 0.95rem; }
 
-        .card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 22px;
-            padding: 22px;
-            line-height: 1.8;
-        }
-
+        .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; padding: 22px; line-height: 1.8; }
         .primary-card { background: rgba(14,165,233,0.08); border-color: rgba(14,165,233,0.16); }
-
         .card-header h3 { margin-bottom: 16px; color: var(--accent); font-size: 1rem; letter-spacing: 0.02em; }
 
         .skills-grid, .contact-grid, .projects-grid { display: grid; gap: 16px; }
         .skills-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
 
         .skill-badge, .project-card, .contact-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px;
-            border-radius: 18px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
+            display: flex; align-items: center; gap: 12px; padding: 16px;
+            border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
         }
 
         .skill-badge { justify-content: flex-start; }
         .skill-icon { font-size: 1.1rem; }
-
         .tech-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-
-        .tech-tag {
-            display: inline-flex;
-            padding: 8px 12px;
-            border-radius: 999px;
-            background: rgba(14,165,233,0.15);
-            color: var(--accent);
-            font-size: 0.85rem;
-        }
+        .tech-tag { display: inline-flex; padding: 8px 12px; border-radius: 999px; background: rgba(14,165,233,0.15); color: var(--accent); font-size: 0.85rem; }
 
         .timeline { display: grid; gap: 20px; }
-
         .timeline-item { display: grid; grid-template-columns: 28px 1fr; gap: 16px; }
-
-        .timeline-marker {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--accent);
-            box-shadow: 0 0 0 6px rgba(14,165,233,0.1);
-            margin-top: 10px;
-        }
-
+        .timeline-marker { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 6px rgba(14,165,233,0.1); margin-top: 10px; }
         .timeline-content .card { padding: 20px; }
-
         .date, .company { color: var(--text-dim); }
-
         .tasks-list { margin-top: 14px; padding-left: 0; list-style: none; line-height: 1.8; color: var(--text-dim); }
         .tasks-list li { margin-bottom: 4px; }
 
         .projects-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-
         .project-card { flex-direction: column; min-height: 220px; align-items: flex-start; }
-
         .project-header { display: flex; justify-content: space-between; gap: 12px; align-items: center; width: 100%; }
 
-        .badge, .badge-featured {
-            display: inline-flex;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: rgba(14,165,233,0.15);
-            color: var(--accent);
-            font-size: 0.78rem;
-            font-weight: 700;
-        }
-
+        .badge, .badge-featured { display: inline-flex; padding: 6px 12px; border-radius: 999px; background: rgba(14,165,233,0.15); color: var(--accent); font-size: 0.78rem; font-weight: 700; }
         .badge-featured { background: rgba(14,165,233,0.25); }
-
         .project-desc { color: var(--text-dim); line-height: 1.7; margin-top: 8px; }
 
-        .project-link, .contact-link, .cta-button {
-            display: inline-block;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: auto;
-        }
-
+        .project-link, .contact-link, .cta-button { display: inline-block; color: var(--accent); text-decoration: none; font-weight: 600; margin-top: auto; }
         .project-link:hover, .contact-link:hover { text-decoration: underline; }
 
         .skills-matrix { display: grid; gap: 18px; margin-top: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
@@ -282,23 +181,9 @@
         .contact-card h3 { margin-bottom: 10px; }
         .contact-info { color: var(--text-dim); line-height: 1.7; }
 
-        .cta-section {
-            margin-top: 22px;
-            padding: 20px;
-            border-radius: 18px;
-            background: rgba(14,165,233,0.08);
-            border: 1px solid rgba(14,165,233,0.16);
-        }
-
+        .cta-section { margin-top: 22px; padding: 20px; border-radius: 18px; background: rgba(14,165,233,0.08); border: 1px solid rgba(14,165,233,0.16); }
         .cta-section p { margin-bottom: 14px; color: var(--text-dim); line-height: 1.75; }
-
-        .cta-button {
-            padding: 12px 20px;
-            border-radius: 999px;
-            background: rgba(14,165,233,0.17);
-            transition: var(--transition);
-        }
-
+        .cta-button { padding: 12px 20px; border-radius: 999px; background: rgba(14,165,233,0.17); transition: var(--transition); }
         .cta-button:hover { background: rgba(14,165,233,0.30); }
 
         h2 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
@@ -326,7 +211,6 @@
                 <h1>Ivan Vivar Tirado</h1>
                 <p class="role">Administrador de Sistemas</p>
             </div>
-
             <nav class="nav-menu">
                 <button class="nav-item active" onclick="showSection('home', this)">
                     <span class="icon">◆</span><span>Perfil</span>
@@ -341,7 +225,6 @@
                     <span class="icon">◆</span><span>Contacto</span>
                 </button>
             </nav>
-
             <div class="sidebar-footer">
                 <a href="https://linkedin.com/in/ivanvivartirado" target="_blank" class="social-link">LinkedIn</a>
                 <a href="https://github.com/ivanvivartirado" target="_blank" class="social-link">GitHub</a>
@@ -373,13 +256,11 @@
                     <p class="subtitle">> Administrador de Sistemas (ASIR) | Especialista en Redes y Seguridad</p>
                     <p class="location">📍 Santa Coloma de Gramanet, Barcelona</p>
                 </div>
-
                 <div class="card primary-card">
                     <div class="card-header"><h3>// Sobre mí</h3></div>
                     <p>Soy una persona tranquila, paciente y sociable, con gran capacidad de adaptación. Aprendo rápido de forma autodidacta y me integro fácilmente en equipos y nuevos entornos de trabajo.</p>
                     <p style="margin-top:10px"><strong>Apasionado por:</strong> La tecnología, el soporte técnico y la <span class="highlight">ciberseguridad</span>.</p>
                 </div>
-
                 <div>
                     <h3 style="margin-bottom:16px;color:var(--accent)">// Certificaciones y Competencias</h3>
                     <div class="skills-grid">
@@ -389,7 +270,6 @@
                         <div class="skill-badge"><span class="skill-icon">⚙️</span><span>Admin. Redes Win/Linux</span></div>
                     </div>
                 </div>
-
                 <div>
                     <h3 style="margin-bottom:16px;color:var(--accent)">// Stack Técnico</h3>
                     <div class="tech-list">
@@ -409,7 +289,6 @@
                 <div class="section-header">
                     <h2>Experiencia Profesional</h2>
                 </div>
-
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
@@ -426,7 +305,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -443,9 +321,7 @@
                         </div>
                     </div>
                 </div>
-
                 <h2 style="margin-top:40px">Formación Académica</h2>
-
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
@@ -458,7 +334,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -477,7 +352,6 @@
                 <div class="section-header">
                     <h2>Proyectos y Competencias</h2>
                 </div>
-
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-header">
@@ -494,7 +368,6 @@
                         </div>
                         <a href="https://github.com/ivanvivartirado/Luanti-Container-Lifter-Project" target="_blank" class="project-link" style="margin-top:16px">Ver en GitHub →</a>
                     </div>
-
                     <div class="project-card">
                         <div class="project-header">
                             <h3>🏠 Homelab Personal</h3>
@@ -511,7 +384,6 @@
                         <a href="https://github.com/ivanvivartirado/homelab-personal" target="_blank" class="project-link" style="margin-top:16px">Ver en GitHub →</a>
                     </div>
                 </div>
-
                 <h2 style="margin-top:40px">Habilidades Técnicas</h2>
                 <div class="skills-matrix">
                     <div class="skill-group">
@@ -549,7 +421,6 @@
                     <h2>Conectemos</h2>
                     <p class="subtitle">> Siempre abierto a nuevas oportunidades y colaboraciones</p>
                 </div>
-
                 <div class="contact-grid">
                     <div class="contact-card">
                         <h3>📧 Email</h3>
@@ -580,7 +451,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="cta-section">
                     <p>> ¿Quieres trabajar juntos? Envíame un email o conecta conmigo en LinkedIn.</p>
                     <a href="mailto:ivaanv23@gmail.com" class="cta-button">Enviar Email</a>
@@ -591,10 +461,8 @@
         function showSection(id, btn) {
             const display = document.getElementById('display');
             const navItems = document.querySelectorAll('.nav-item');
-
             navItems.forEach(item => item.classList.remove('active'));
             if (btn) btn.classList.add('active');
-
             display.classList.add('fade-out');
             setTimeout(() => {
                 display.innerHTML = content[id];
@@ -603,7 +471,6 @@
             }, 150);
         }
 
-        // Mostrar home al cargar
         showSection('home', document.querySelector('.nav-item'));
     </script>
 </body>
