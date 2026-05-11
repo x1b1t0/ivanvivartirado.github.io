@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Vivar Tirado - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar">IVT</div>
+                <h1>Ivan Vivar</h1>
+                <p class="role">Administrador de Sistemas</p>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="perfil">
+                    <span class="icon">◆</span>
+                    <span>Perfil</span>
+                </a>
+                <a href="#" class="nav-item" data-section="experiencia">
+                    <span class="icon">◆</span>
+                    <span>Experiencia</span>
+                </a>
+                <a href="#" class="nav-item" data-section="educacion">
+                    <span class="icon">◆</span>
+                    <span>Educación</span>
+                </a>
+                <a href="#" class="nav-item" data-section="habilidades">
+                    <span class="icon">◆</span>
+                    <span>Habilidades</span>
+                </a>
+                <a href="#" class="nav-item" data-section="contacto">
+                    <span class="icon">◆</span>
+                    <span>Contacto</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="https://linkedin.com/in/ivanvivartirado" target="_blank" class="social-link">
+                    <span>in</span>
+                </a>
+                <a href="https://github.com/x1b1t0" target="_blank" class="social-link">
+                    <span>gh</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main">
+            <div class="window">
+                <div class="window-header">
+                    <span class="terminal-title">~/portfolio.sh</span>
+                    <div class="window-controls">
+                        <span class="control"></span>
+                        <span class="control"></span>
+                        <span class="control"></span>
+                    </div>
+                </div>
+
+                <div class="window-content">
+                    <div id="display" class="display">
+                        <!-- El contenido se inyecta aquí -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
